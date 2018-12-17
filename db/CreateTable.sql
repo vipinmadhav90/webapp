@@ -1,0 +1,2 @@
+USE webapp;
+CREATE TABLE posts ( post_id INT AUTO_INCREMENT, post VARCHAR(255 ), PRIMARY KEY(post_id))ENGINE=INNODB;

@@ -1,6 +1,14 @@
 from flask import Flask, render_template, request, flash, redirect, url_for
 import MySQLdb
-db = MySQLdb.connect("localhost","dbuser","1qazXSW21@","webapp")
+import os
+
+db_host = os.environ['APP_DB_HOST']
+database = os.environ['APP_DB_NAME']
+username = os.environ['APP_DB_USER']
+password = os.environ['APP_DB_PASSWORD']
+
+#db = MySQLdb.connect("localhost","dbuser","1qazXSW21@","webapp")
+db = MySQLdb.connect(db_host,username,password,database)
 cursor = db.cursor()
 
 app = Flask(__name__)
@@ -17,6 +25,7 @@ def submit():
        cursor.execute("INSERT INTO posts (post) VALUES(%s)", (message,))
        db.commit()
        flash('Your message saved successfully')
+            
        return render_template('result.html')
    else:
        pass
@@ -28,9 +37,13 @@ def search():
        x = cursor.execute("SELECT * FROM posts WHERE post = (%s)",(message,))
        print(x)
        if int(x) > 0:
-	    flash('Your message is already existing!')
+	    flash('Your message is existing!')
+            if message == message[::-1]:
+		flash('Message ' + message + ' is a palindrome')
+            else:
+                flash('Message ' + message + ' is not a palindrome')
        else:
-	    flash('Your message deosnt existing!')
+	    flash('Your message deosnt exist!')
        return render_template('result.html')
    else:
        pass
@@ -39,6 +52,7 @@ def search():
 def list():
        cursor.execute("SELECT * FROM posts")
        data = cursor.fetchall()
+       flash('Following are the mssages found in database:')
        for raw in data:
 	    flash(raw[1])
        return render_template('result.html')
