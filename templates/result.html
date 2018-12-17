@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Success</title>
+    <title>Result</title>
 </head>
 <body>
-<center><h2>Your message has found {{message}} </h2></center>
+{%  with messages = get_flashed_messages() %}
+  {% if messages %}
+   <ul class =flashes>
+   {% for message in messages %}
+     <center><h3>{{ message }}</h3></centre>
+   {% endfor %}
+   </ul>
+  {% endif %}
+{% endwith %}
 </body>
 </html>
