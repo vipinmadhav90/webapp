@@ -1,14 +1,11 @@
 from flask import Flask, render_template, request, flash
 import MySQLdb
 import os
-
-#db_host = os.environ['APP_DB_HOST']
-#database = os.environ['APP_DB_NAME']
-#username = os.environ['APP_DB_USER']
-#password = os.environ['APP_DB_PASSWORD']
-
-db = MySQLdb.connect("localhost","dbuser","1qazXSW21@","webapp")
-#db = MySQLdb.connect(db_host,username,password,database)
+db_host = os.environ['APP_DB_HOST']
+database = os.environ['APP_DB_NAME']
+username = os.environ['APP_DB_USER']
+password = os.environ['APP_DB_PASSWORD']
+db = MySQLdb.connect(db_host,username,password,database)
 cursor = db.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS posts (post_id INT AUTO_INCREMENT, post VARCHAR(255 ), PRIMARY KEY(post_id)) ENGINE = InnoDB;")
 
@@ -71,4 +68,4 @@ def delete():
        pass
 
 if __name__ == '__main__':
-    app.run(debug = True, host='0.0.0.0',port=8080)
+    app.run(debug = False, host='0.0.0.0',port=8080)
