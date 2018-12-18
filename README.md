@@ -20,6 +20,7 @@ Docker version 18.09.0, build 4d60db4
 
 ### Installation and Setup
 
+
 Download docker-compose.yml from git repo and run below command to start the App service within Docker enviroinment,
 
 
@@ -40,6 +41,7 @@ e8be03c8ca87        mariadb:latest             "docker-entrypoint.s…"   10 min
 ```
 
 This will make the App online and you can access it using  URL http://my-website.com
+
 
 To stop the service, run Docker command as below,
 
