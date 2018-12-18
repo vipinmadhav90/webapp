@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <title> Web App Home Page</title>
 </head>
-<body>
+<body bgcolor="#E6E6FA">
 <center><h1> Welcome to the Web App</h1></center>
-<h4>Click here to show all messages from database</h4>
-<form method="post" action="/ListMessage">
-    <input type="submit" value="Submit" name="ok"/>
+<br />
+<center><h4>Click here to show all messages from database</h4></center>
+<form method="post" action="/ListMessage" align="middle">
+    <input type="submit" value="Here" name="ok"/>
 </form>
 <br />
-<h4>Please enter your message to post into database</h4>
-<form method="post" action="/SubmitMessage">
+<center><h4>Please enter your message to post into database</h4></center>
+<form method="post" action="/SubmitMessage" align="middle">
     <input type="text" name="message" placeholder="Enter your message">
     <br><br>
-    <input type="submit" value="Submit" name="ok"/>
+    <input type="submit" value="Post" name="ok"/>
 </form>
 <br />
-<br />
-<h4>Please enter your message to search from database</h4>
-<form method="post" action="/SearchMessage">
+<center><h4>Please enter your message to search from database</h4></center>
+<form method="post" action="/SearchMessage" align="middle">
     <input type="text" name="message" placeholder="Enter your message">
     <br><br>
-    <input type="submit" value="Submit" name="ok"/>
+    <input type="submit" value="Search" name="ok"/>
 </form>
 <br />
-<h4>Please enter your message to delete from database</h4>
-<form method="post" action="/DeleteMessage">
+<center><h4>Please enter your message to delete from database</h4></center>
+<form method="post" action="/DeleteMessage" align="middle">
     <input type="text" name="message" placeholder="Enter your message">
     <br><br>
-    <input type="submit" value="Submit" name="ok"/>
+    <input type="submit" value="Delete" name="ok"/>
 </form>
 </body>
 </html>
