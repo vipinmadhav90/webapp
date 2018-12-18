@@ -5,7 +5,7 @@ Simple Python application to handle message submissions from users.
 
 ## Getting Started
 
-This is a simple Python REST application Allows users to post messages, search messages, delete messages and also to list all existing messages. This also identifies if the message is a Palindrome or not. App is setup using Flask, it is a web framework written in Python.
+This is a simple Python REST application allows users to post messages, search messages, delete messages and also to list all existing messages. This also identifies if the message is a Palindrome or not. App is setup using Flask, it is a web framework written in Python.
 
 
 ### Prerequisites
@@ -30,19 +30,27 @@ Creating webapp_db_1_87403bd3da0d ... done
 Creating webapp_app_1_58c70b5770b6 ... done
 ```
 
-This will make the App online and you can access it using  URL http://<IP-Address> . Example, http://127.0.0.1
+You will see following Docker instances on your machine and the App instance is listening on port 80,
+
+```
+# docker ps
+CONTAINER ID        IMAGE                      COMMAND                  CREATED             STATUS              PORTS                  NAMES
+bfade4e32f90        vipinmadhav90/webapp:4.0   "python app.py"          10 minutes ago      Up 10 minutes       0.0.0.0:80->8080/tcp   webapp_app_1_3aab962a5c84
+e8be03c8ca87        mariadb:latest             "docker-entrypoint.s…"   10 minutes ago      Up 10 minutes       3306/tcp               webapp_db_1_b9b41899bf7f
+```
+
+This will make the App online and you can access it using  URL http://my-website.com
 
 
 ## Features
 
 Following features are available with this App,
 
-```
-Allows users to submit/post messages
-Lists received messages
-Retrieves a specific message on demand, and determines if it is a palindrome.
-Allows users to delete specific messages
-```
+* Allows users to submit/post messages
+* Lists received messages
+* Retrieves a specific message on demand, and determines if it is a palindrome.
+* Allows users to delete specific messages
+
 
 ## Deployment
 
