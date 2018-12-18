@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title> Home Page</title>
+    <title> Web App Home Page</title>
 </head>
 <body>
-<h1> Welcome to the Web App</h1>
-<h4>Please enter your message to post</h4>
+<center><h1> Welcome to the Web App</h1></center>
+<h4>Click here to show all messages from database</h4>
+<form method="post" action="/ListMessage">
+    <input type="submit" value="Submit" name="ok"/>
+</form>
+<br />
+<h4>Please enter your message to post into database</h4>
 <form method="post" action="/SubmitMessage">
     <input type="text" name="message" placeholder="Enter your message">
     <br><br>
@@ -14,15 +19,17 @@
 </form>
 <br />
 <br />
-<h4>Please enter your message to search </h4>	
+<h4>Please enter your message to search from database</h4>
 <form method="post" action="/SearchMessage">
     <input type="text" name="message" placeholder="Enter your message">
     <br><br>
     <input type="submit" value="Submit" name="ok"/>
 </form>
 <br />
-<h4>Click here to show all messages </h4>
-<form method="post" action="/ListMessage">
+<h4>Please enter your message to delete from database</h4>
+<form method="post" action="/DeleteMessage">
+    <input type="text" name="message" placeholder="Enter your message">
+    <br><br>
     <input type="submit" value="Submit" name="ok"/>
 </form>
 </body>
