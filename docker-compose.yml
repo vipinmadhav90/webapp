@@ -14,7 +14,7 @@ services:
    app:
      depends_on:
        - db
-     image: vipinmadhav90/webapp:4.0
+     image: vipinmadhav90/webapp:5.0
      ports:
        - "80:8080"
      restart: always
