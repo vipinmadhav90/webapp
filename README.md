@@ -41,6 +41,16 @@ e8be03c8ca87        mariadb:latest             "docker-entrypoint.s…"   10 min
 
 This will make the App online and you can access it using  URL http://my-website.com
 
+To stop the service, run Docker command as below,
+
+```
+# docker-compose -f docker-compose.yml down
+Stopping webapp_app_1_3aab962a5c84 ... done
+Stopping webapp_db_1_b9b41899bf7f  ... done
+Removing webapp_app_1_3aab962a5c84 ... done
+Removing webapp_db_1_b9b41899bf7f  ... done
+Removing network webapp_default
+```
 
 ## Features
 
