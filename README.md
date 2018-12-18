@@ -1,10 +1,10 @@
-# Project Title
+# Python Web App
 
-One Paragraph of project description goes here
+Simple Python application to handle message submissions from users. 
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This is a simple Python REST application Allows users to post messages, search messages, delete messages and also to list all existing messages. This also identifies if the message is a Palindrome or not. 
 
 ### Prerequisites
 
