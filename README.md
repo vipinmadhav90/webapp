@@ -8,7 +8,7 @@ This is a simple Python REST application Allows users to post messages, search m
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+This app is designed to run on a Docker environment. You need to have a system with Docker service running.
 
 ```
 Give examples
