@@ -11,17 +11,20 @@ This is a simple Python REST application Allows users to post messages, search m
 This app is designed to run on a Docker environment. You need to have a system with Docker service running.
 
 ```
-Give examples
+# docker -v
+Docker version 18.09.0, build 4d60db4
 ```
 
-### Installing
+### Installation and Setup
 
-A step by step series of examples that tell you how to get a development env running
+Download docker-compose.yml from my git repo and run below command to run the service inside Docker enviroinment,
 
-Say what the step will be
 
 ```
-Give the example
+# docker-compose -f docker-compose.yml up -d
+Creating network "webapp_default" with the default driver
+Creating webapp_db_1_87403bd3da0d ... done
+Creating webapp_app_1_58c70b5770b6 ... done
 ```
 
 And repeat
@@ -78,10 +81,4 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
