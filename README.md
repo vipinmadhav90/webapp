@@ -2,9 +2,11 @@
 
 Simple Python application to handle message submissions from users. 
 
+
 ## Getting Started
 
-This is a simple Python REST application Allows users to post messages, search messages, delete messages and also to list all existing messages. This also identifies if the message is a Palindrome or not. 
+This is a simple Python REST application Allows users to post messages, search messages, delete messages and also to list all existing messages. This also identifies if the message is a Palindrome or not. App is setup using Flask, it is a web framework written in Python.
+
 
 ### Prerequisites
 
@@ -15,9 +17,10 @@ This app is designed to run on a Docker environment. You need to have a system w
 Docker version 18.09.0, build 4d60db4
 ```
 
+
 ### Installation and Setup
 
-Download docker-compose.yml from my git repo and run below command to run the service inside Docker enviroinment,
+Download docker-compose.yml from git repo and run below command to start the App service within Docker enviroinment,
 
 
 ```
@@ -27,58 +30,29 @@ Creating webapp_db_1_87403bd3da0d ... done
 Creating webapp_app_1_58c70b5770b6 ... done
 ```
 
-And repeat
+This will make the App online and you can access it using  URL http://<IP-Address> . Example, http://127.0.0.1
+
+
+## Features
+
+Following features are available with this App,
 
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+Allows users to submit/post messages
+Lists received messages
+Retrieves a specific message on demand, and determines if it is a palindrome.
+Allows users to delete specific messages
 ```
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Python App is dockerized to make the App setup easier. This App is configured with two docker images - first one for database(MariaDB is used) and another for the Python code running(CentOS image is used here).
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* Flask - The web framework used
 
 ## License
 
 This project is licensed under the Apache License 2.0 - see the [LICENSE.md](LICENSE.md) file for details
+
