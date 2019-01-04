@@ -42,6 +42,7 @@ e8be03c8ca87        mariadb:latest             "docker-entrypoint.s…"   10 min
 
 This will make the App online and you can access it using  URL http://my-website.com
 
+Demo of this App can be viewed from http://ec2-18-216-250-0.us-east-2.compute.amazonaws.com/
 
 To stop the service, run Docker command as below,
 
